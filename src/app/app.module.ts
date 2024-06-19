@@ -21,12 +21,32 @@ import { MatInputModule } from '@angular/material/input'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatSnackBarModule } from '@angular/material/snack-bar'
 
+const routes: Routes = [
+  { path: 'home', component: Home },
+  { path: 'contact', component: Contact},
+  { path: '', redirectTo: '/home', pathMatch: 'full'}
+]
+
 @NgModule({
   declarations: [
     AppComponent,
+    Home,
+    Contact
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled', preloadingStrategy: PreloadAllModules }),
+    MatDividerModule,
+    MatTooltipModule,
+    MatButtonModule,
+    MatExpansionModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync()
