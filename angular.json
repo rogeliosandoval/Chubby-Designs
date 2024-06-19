@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "chubby-designs:build:production"
+              "buildTarget": "chubby-designs:build:production"
             },
             "development": {
-              "browserTarget": "chubby-designs:build:development"
+              "buildTarget": "chubby-designs:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "chubby-designs:build"
+            "buildTarget": "chubby-designs:build"
           }
         },
         "test": {
