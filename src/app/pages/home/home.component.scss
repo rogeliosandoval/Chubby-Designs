@@ -1,6 +1,25 @@
 @import "src/variables.scss";
-// @import 'include-media';
+@import 'include-media';
 
-h1 {
-  color: hotpink;
+.home-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 140px);
+  background: black;
+  overflow: clip;
+}
+
+.title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  padding: 20px;
+  background: green;
 }
