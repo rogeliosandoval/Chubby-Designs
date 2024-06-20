@@ -1,7 +1,58 @@
-<div class="home-container">
+<div class="home">
   <div class="cta">
-    <div class="title">
-      Building clean websites for your business
+    <div class="info">
+      <div class="title">
+        <span>Upgrade</span> The Potential
+        <br/>
+        of Your Business
+      </div>
+      <div class="message">
+        Your online presence matters more than you think.
+        <br/>
+        Let's build your business a website and save you money. Starting at only <span>$250</span> flat!
+      </div>
+      <button mat-flat-button color="primary">Get In Contact</button>
+    </div>
+    <div class="image-container">
+      @if (preview === 0) {
+        <img src="assets/projects/ythi.gif" alt="site-preview">
+      } @else if (preview === 1) {
+        <img src="assets/projects/hopper.gif" alt="site-preview">
+      }
+      <div class="navigation">
+        <mat-icon fontIcon="arrow_back" (click)="decrementPreview()"></mat-icon>
+        <mat-icon fontIcon="arrow_forward" (click)="incrementPreview()"></mat-icon>
+      </div>
     </div>
   </div>
+  <div class="facts">
+    <div class="fact">
+      <img src="assets/clipart/rocket.png" alt="rocket">
+      <div class="fact-title">
+        Fast Delivery
+      </div>
+      <div class="fact-info">
+        Time is money and we get that. Your website will be finished and delievered to you in 2 days MAX.
+      </div>
+    </div>
+    <div class="fact">
+      <img src="assets/clipart/laptop.webp" alt="latptop">
+      <div class="fact-title">
+        Custom Code
+      </div>
+      <div class="fact-info">
+        Isn't it weird when you see two identical looking websites? Not yours. Every site is designed with custom code to your liking.
+      </div>
+    </div>
+    <div class="fact">
+      <img src="assets/clipart/responsive.webp" alt="devices">
+      <div class="fact-title">
+        Always Responsive
+      </div>
+      <div class="fact-info">
+        Your website will be future proof, so that all of your visitors will get the best experience on any devices they use.
+      </div>
+    </div>
+  </div>
+  <div class="ness"></div>
 </div>

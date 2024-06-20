@@ -1,25 +1,135 @@
 @import "src/variables.scss";
 @import 'include-media';
 
-.home-container {
-  position: relative;
+.home {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.cta {
+  margin-top: 100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 140px);
-  background: black;
-  overflow: clip;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  img {
+    border-radius: 50px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+  button {
+    width: 200px;
+    letter-spacing: 0;
+    font-weight: bold;
+    font-size: 1rem;
+  }
 }
 
 .title {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  color: black;
+  font-size: 3rem;
+  line-height: 4.6rem;
+  font-weight: bold;
+
+  span {
+    color: $theme-blue;
+  }
+}
+
+.message {
+  color: rgb(69, 69, 69);
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  max-width: 450px;
+
+  span {
+    color: $theme-blue;
+    font-weight: bold;
+  }
+}
+
+.ness {
+  height: 1000px;
   width: 100%;
-  text-align: center;
-  font-size: 50px;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 20px;
-  background: green;
+
+  img {
+    max-height: 400px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.517);
+  }
+}
+
+.navigation {
+  display: flex;;
+  justify-content: center;
+  gap: 50px;
+
+  mat-icon {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.facts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 130px 20px;
+
+  & .fact:first-child {
+    img {
+      width: 120px;
+    }
+  }
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 180px;
+  }
+}
+
+.fact-title {
+  color: $theme-blue;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.fact-info {
+  color: rgb(96, 96, 96);
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  max-width: 400px;
 }
