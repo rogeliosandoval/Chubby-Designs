@@ -1,6 +1,17 @@
-// @import 'include-media';
+@import 'include-media';
+
+$theme-blue: #4289c1;
+
+.active {
+  color: $theme-blue;
+}
 
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes slideInBottom {
+  0% { transform: translateY(200px); }
+  100% { transform: translateY(0); }
 }
