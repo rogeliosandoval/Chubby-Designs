@@ -1,5 +1,5 @@
 <h1>Chubby Designs</h1>
-<a href="https://chubby-designs-4f248.web.app/home"><b>Link</b></a>
+<a href="https://chubbydesigns.com"><b>Link</b></a>
 <br>
 <h3>Framework Used:</h3>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="68px;"/>
