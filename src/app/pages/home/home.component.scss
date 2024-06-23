@@ -1,8 +1,20 @@
 @import "src/variables.scss";
 @import 'include-media';
 
-.home {
+@include media('<tablet') {
+  .break {
+    display: none;
+  }
+}
 
+.fadeIn {
+  visibility: visible !important;
+  animation: fadeIn 0.5s linear;
+}
+
+.fadeInAndSlideInBottom {
+  visibility: visible !important;
+  animation: fadeInAndSlideInBottom 0.7s linear;
 }
 
 .cta {
@@ -15,6 +27,15 @@
 
   img {
     border-radius: 50px;
+
+    @include media('<tablet') {
+      border-radius: 0;
+      height: 200px;
+    }
+  }
+
+  @include media('<tablet') {
+    margin-top: 0;
   }
 }
 
@@ -31,6 +52,11 @@
     font-weight: bold;
     font-size: 1.2rem;
     padding: 20px;
+
+    @include media('<tablet') {
+      font-size: 1rem;
+      max-width: 180px;
+    }
   }
 }
 
@@ -42,6 +68,11 @@
 
   span {
     color: $theme-blue;
+  }
+
+  @include media('<tablet') {
+    font-size: 2.2rem;
+    line-height: 3.5rem;
   }
 }
 
@@ -68,22 +99,6 @@
   }
 }
 
-.location {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 1rem;
-  color: rgb(69, 69, 69);
-
-  mat-icon {
-    height: auto;
-    width: auto;
-    font-size: 2rem;
-    color: red;
-  }
-}
-
 .image-container {
   width: 100%;
   max-width: 800px;
@@ -97,12 +112,20 @@
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.517);
     animation: fadeIn 0.3s linear;
   }
+
+  @include media('<tablet') {
+    padding: 0;
+  }
 }
 
 .image-description {
   font-size: 0.8rem;
   text-align: right;
   font-weight: bold;
+
+  @include media('<tablet') {
+    text-align: center;
+  }
 }
 
 .navigation {
@@ -132,13 +155,21 @@
   justify-content: center;
   align-items: center;
   font-size: 3rem;
+  line-height: 4.6rem;
   text-align: center;
-  padding-top: 100px;
+  margin-top: 100px;
   height: 300px;
+  position: relative;
+  visibility: hidden;
 
-  span {
-    position: relative;
-    animation: fadeIn 1s linear;
+  @include media('<desktop') {
+    font-size: 2rem;
+  }
+
+  @include media('<tablet') {
+    font-size: 1.7rem;
+    line-height: 3rem;
+    margin-top: 0;
   }
 }
 
@@ -146,13 +177,24 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 50px;
   padding: 100px 20px;
   min-height: 270px;
+  visibility: hidden;
 
   & .fact:first-child {
     img {
       width: 120px;
+
+      @include media('<desktop') {
+        width: 80px;
+      }
     }
+  }
+
+  @include media('<tablet') {
+    padding: 0 20px;
   }
 }
 
@@ -164,6 +206,12 @@
 
   img {
     width: 180px;
+
+    @include media('<desktop') {
+      img {
+        width: 100px;
+      }
+    }
   }
 }
 
@@ -172,6 +220,10 @@
   font-size: 1.5rem;
   margin-top: 30px;
   margin-bottom: 10px;
+
+  @include media('<desktop') {
+    font-size: 1.2rem;
+  }
 }
 
 .fact-info {
@@ -179,6 +231,10 @@
   font-size: 1.2rem;
   line-height: 1.9rem;
   max-width: 400px;
+
+  @include media('<desktop') {
+    font-size: 1rem;
+  }
 }
 
 .diamond {
@@ -189,4 +245,12 @@
   width: 200px;
   z-index: -1;
   opacity: 0.4;
+}
+
+.contact {
+  visibility: hidden;
+
+  @include media('<tablet') {
+    padding-bottom: 30px;
+  }
 }
