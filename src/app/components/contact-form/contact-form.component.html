@@ -1,0 +1,44 @@
+<div class="form-container">
+  <div class="form-title">
+    Let's get to work!
+  </div>
+  <div class="form-subtitle">
+    * I usually respond within a day
+  </div>
+  <form #formRef="ngForm" class="contact-form"
+    [class.fade]="sending"
+    [formGroup]="contactForm"
+    (ngSubmit)="sendMessage()">
+    <div class="input-group">
+      <mat-form-field style="background:white;" 
+        appearance="outline"
+        subscriptSizing="dynamic">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+      <mat-form-field style="background:white;" 
+        appearance="outline"
+        subscriptSizing="dynamic">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+    </div>
+    <mat-form-field style="background:white;" 
+      appearance="outline"
+      subscriptSizing="dynamic"
+      class="subject-input">
+      <mat-label>Subject</mat-label>
+      <input matInput formControlName="subject">
+    </mat-form-field>
+    <mat-form-field appearance="outline"
+      subscriptSizing="dynamic"
+      style="background:white;">
+      <mat-label>Message</mat-label>
+      <textarea matInput rows="5" formControlName="message"></textarea>
+    </mat-form-field>
+    <button mat-flat-button color="primary" [disabled]="contactForm.invalid">Send Message</button>
+    @if (sending) {
+      <mat-spinner color="primary"></mat-spinner>
+    }
+  </form>
+</div>
