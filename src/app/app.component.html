@@ -1,4 +1,48 @@
-<div class="navbar">
-
+<div class="main-container">
+  <div class="navbar">
+    <img src="assets/chubby-designs-logo.svg" alt="logo" [draggable]="false" routerLink="/home">
+    <div class="mobile-nav">
+      @if (!mobileNavOpen) {
+        <mat-icon fontIcon="dehaze" (click)="openNav()"></mat-icon>
+      } @else {
+        <mat-icon fontIcon="close" (click)="openNav()"></mat-icon>
+      }
+      @if (mobileNavOpen) {
+        <div class="mobile-nav-links">
+          <div class="nav-link" routerLink="/home" (click)="mobileNavOpen = false">Home</div>
+          <!-- <div class="nav-link" routerLink="/pricing" (click)="mobileNavOpen = false">Pricing</div> -->
+          <div class="nav-link" routerLink="/contact" (click)="mobileNavOpen = false">Contact</div>
+        </div>
+      }
+    </div>
+    <div class="nav-link-container">
+      <div class="nav-link"
+        routerLink="/home"
+        [class.active]="sharedService.grabRoute() === '/home'">
+        Home
+      </div>
+      <!-- <div class="nav-link"
+        routerLink="/pricing"
+        [class.active]="sharedService.grabRoute() === '/pricing'">
+        Pricing
+      </div> -->
+      <div class="nav-link"
+        routerLink="/contact"
+        [class.active]="sharedService.grabRoute() === '/contact'">
+        Contact
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <img class="diamond" src="assets/chubby-designs-diamond.webp" alt="diamond" [draggable]="false">
 </div>
-<router-outlet></router-outlet>
+<div class="footer">
+  <div class="footer-info">
+    <span>© 2024 Chubby Designs</span>
+    <div>Built with <span style="color:rgb(255, 119, 119)">Angular</span>.</div>
+  </div>
+</div>
+<div class="angled-background-up"></div>
+@if (sharedService.grabRoute() === '/home') {
+  <div class="angled-background-down"></div>
+}

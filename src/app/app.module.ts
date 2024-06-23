@@ -11,6 +11,9 @@ import { AppComponent } from './app.component'
 import { Home } from './pages/home/home.component'
 import { Contact } from './pages/contact/contact.component'
 
+//Components
+import { ContactForm } from './components/contact-form/contact-form.component'
+
 //Angular Material
 import { MatDividerModule } from '@angular/material/divider'
 import { MatTooltipModule } from '@angular/material/tooltip'
@@ -20,6 +23,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatIconModule } from '@angular/material/icon'
 
 const routes: Routes = [
   { path: 'home', component: Home },
@@ -31,7 +35,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     Home,
-    Contact
+    Contact,
+    ContactForm
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,8 @@ const routes: Routes = [
     MatInputModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [
     provideAnimationsAsync()
