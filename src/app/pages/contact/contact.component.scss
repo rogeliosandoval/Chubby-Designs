@@ -45,7 +45,7 @@
 .text,
 .contact-text {
   max-width: 500px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 2rem;
 
   span {
@@ -54,5 +54,15 @@
 }
 
 .contact-text {
-  padding: 0 20px;
+  text-align: center;
+  background-color: white;
+  box-shadow: -20px 20px $theme-blue;
+  padding: 25px;
+  border-radius: 20px;
+
+  @include media('<tablet') {
+    padding: 15px;
+    box-shadow: none;
+    background-color: transparent;
+  }
 }
