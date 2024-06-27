@@ -26,9 +26,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { MatIconModule } from '@angular/material/icon'
 
 const routes: Routes = [
-  { path: 'home', component: Home },
-  { path: 'contact', component: Contact},
-  { path: '', redirectTo: '/home', pathMatch: 'full'}
+  { path: '', component: Home },
+  { path: 'contact', component: Contact}
 ]
 
 @NgModule({

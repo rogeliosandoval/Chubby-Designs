@@ -1,6 +1,6 @@
 <div class="main-container">
   <div class="navbar">
-    <img src="assets/chubby-designs-logo.svg" alt="logo" [draggable]="false" routerLink="/home">
+    <img src="assets/chubby-designs-logo.svg" alt="logo" [draggable]="false" routerLink="/">
     <div class="mobile-nav">
       @if (!mobileNavOpen) {
         <mat-icon fontIcon="dehaze" (click)="openNav()"></mat-icon>
@@ -9,7 +9,7 @@
       }
       @if (mobileNavOpen) {
         <div class="mobile-nav-links">
-          <div class="nav-link" routerLink="/home" (click)="mobileNavOpen = false">Home</div>
+          <div class="nav-link" routerLink="/" (click)="mobileNavOpen = false">Home</div>
           <!-- <div class="nav-link" routerLink="/pricing" (click)="mobileNavOpen = false">Pricing</div> -->
           <div class="nav-link" routerLink="/contact" (click)="mobileNavOpen = false">Contact</div>
         </div>
@@ -17,8 +17,8 @@
     </div>
     <div class="nav-link-container">
       <div class="nav-link"
-        routerLink="/home"
-        [class.active]="sharedService.grabRoute() === '/home'">
+        routerLink="/"
+        [class.active]="sharedService.grabRoute() === '/'">
         Home
       </div>
       <!-- <div class="nav-link"
@@ -43,6 +43,6 @@
   </div>
 </div>
 <div class="angled-background-up"></div>
-@if (sharedService.grabRoute() === '/home') {
+@if (sharedService.grabRoute() === '/') {
   <div class="angled-background-down"></div>
 }
